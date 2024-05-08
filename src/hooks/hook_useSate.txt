@@ -1,0 +1,38 @@
+useState hook ?
+ 1. dùng làm gì ?
+ - khi muốn dữ liệu thau đổi thì giao diện tự động cập nhật (render lại theo dữ liệu)
+2. cách dùng :
+
+function Component() {
+	const [state, setState] = useState(initState)
+
+	….
+}
+
+lưu ý:
+- component được re-render sau khi ‘setState’
+- initial state chỉ dùng cho lần đầu
+- Set state với callback ?
+    - initial state với callback
+    - set state là thay thể state bằng giá trị mới
+
+quan tâm :
+- đầu vào  -> đầu ra + đối số + nguyên lí là gì
+- giá trị khởi tạo ban đầu khi dùng lần đầu initState
+ - set giá trí state = initState 
+ - hàm thay đổi state là setState
+
+
+note:
+- 1. array
+- 2. reference types
+ex:
+1. ramdom gift
+2. two-way binding : ràng buộc 2 chiều
+3. todolist
+
+
+mounted / Unmounted
+- mounted : các component thời điểm sử dụng >< unMounted là các component ko được sử dụng
+
+
