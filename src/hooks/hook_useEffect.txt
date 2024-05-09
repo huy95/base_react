@@ -1,0 +1,23 @@
+//events : add / remove event listener
+..observer pattern : Subcribe/unsubcribe
+closure => ham dong
+timer: setInterval, setTimeout, clearInterverl, clearTimeOut
+useState
+Mounted/ unmounted
+
+- side effects
+
+sử dụng khi nào:
+1. update DOM - cập nhật title page`
+2. call api
+3. listen DOM events - scroll - resize
+4. cleanup :
+    - remove listener/ unsubcribe
+    - clear timer
+
+
+  //useEffect(callback, [deps]) - deps ko bắt buộc + callback bắt buộc
+    //cac truong hop :
+    //1. useEffect(callback)
+    //2. useEffect(callback, [])
+    //3. useEffect(callback, [deps])

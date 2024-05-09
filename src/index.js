@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppUseSate from './useStateHooks';
-import AppExampleUseState from './useStateExample'
+// import AppUseSate from './useStateHooks';
+// import AppExampleUseState from './useStateExample'
+import UseEffectHook from "./useEffectHooks";
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppExampleUseState />
+    <UseEffectHook />
   </React.StrictMode>,
  document.getElementById('root')
 );
