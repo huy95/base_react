@@ -21,3 +21,19 @@ sử dụng khi nào:
     //1. useEffect(callback)
     //2. useEffect(callback, [])
     //3. useEffect(callback, [deps])
+
+useEffect :
+1. cập nhật lại state
+2. cập nhật DOM - (mutated)
+3. render UI
+4. gọi cleanup nếu deps thay đổi
+5. gọi useEffect callback
+
+useLayoutEffect:
+1. cập nhật lại state
+2. cập nhật DOm
+3. gọi cleanup nếu deps thay đổi
+4. gọi useLayoutEffect callback (sync)
+5. render lại UI
+
+

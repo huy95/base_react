@@ -10,7 +10,7 @@
 //2. useEffect(callback, [])  => chỉ gọi callback 1 lần khi component mount
 //3. useEffect(callback, [deps])
 
-import {useEffect, useState} from "react";
+import {useLayoutEffect ,useEffect, useState} from "react";
 
 const tabs = ['posts', 'comments', 'albums']
 
@@ -29,7 +29,7 @@ function UseEffectHook() {
     return (
         <div>
             <button onClick={() => setContent(!isShowContent)}>Togger</button>
-            {isShowContent && <ContentSelectImage/>}
+            {isShowContent && <ContentEffectLayout/>}
             {/*<ul>*/}
             {/*    {post.map((item) => (<li>*/}
             {/*        {item.title}*/}
@@ -129,5 +129,49 @@ function ContentSelectImage() {
     return (<div>
         <input type="file" onChange={handlerPreviewAvatar}/>
         <div>{avatar && (<img src={avatar.preview} alt="" width="80%" />)}</div>
+    </div>)
+}
+
+
+function ContentCheckUse() {
+    const [avatar, setAvatar] = useState(1);
+    const [count, setCount] = useState(1);
+
+
+    useEffect(() => { // chạy lần đầu khi amoun
+        console.log('data useEffect');
+        return () => {
+           console.log('data run'); // return được chạy khi count bị thay đổi và lần 2
+        }
+    }, [count])
+
+
+    return (<div>
+        {avatar} - {count}
+        <button onClick={() => setAvatar(avatar + 1)}>select add</button>
+        <button onClick={() => setCount(count + 1)}>select add</button>
+    </div>)
+}
+
+function ContentEffectLayout() {
+    const [count, setCount] = useState(1);
+
+
+    useEffect(() => { // chạy lần đầu khi amoun
+        console.log('useEffect < 3'  )
+        if(count > 3){
+            console.log('useEffect > 3' )
+
+        }
+    }, [count])
+    useLayoutEffect(() => {
+        if(count > 3){
+         console.log('useLayoutEffect')
+        }
+    }, [count])
+    console.log('re-render')
+    return (<div>
+         {count}
+        <button onClick={() => setCount(count + 1)}>select add</button>
     </div>)
 }

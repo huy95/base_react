@@ -1,0 +1,7 @@
+xử lí sự kiện :
+1 hook - function component
+2. HOC - class hoawjc function
+3. render props - class compu
+
+memo => dùng để tránh render lại không cần thiết
+ => nếu dùng memo để tránh gọi lại nhiều thì phải dùng useCallback hết - tránh sử dụng ko cần thiết
