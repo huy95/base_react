@@ -1,0 +1,11 @@
+1. nếu dùng useState dùng đc thì use Reducer cũng sử dụng được
+2. nhưng Reducer dùng có gì khác:
+
+useState hay dùng cho dữ liệu đơn giản
+useReducer dùng dữ liệu khó hơn như ojbect
+
+các bước làm :
+1. init state
+2. action: up/ down
+3. reducer
+4. dispatch
