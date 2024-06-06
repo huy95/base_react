@@ -54,16 +54,4 @@ const reducer = (state, action) => {
     }
 }
 
-function UseReducer() {
-    const [count, dispatch] = useReducer(reducer, initState);
-
-    return (
-        <div>
-            <p>{count}</p>
-            <button onClick={() => dispatch({ type: UP_ACTION })}>Up</button>
-            <button onClick={() => dispatch({ type: DOWN_ACTION })}>Down</button>
-        </div>
-    )
-}
-
 export default TestHook

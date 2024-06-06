@@ -1,0 +1,9 @@
+truyền dữ liệu từ cha xuống con có 2 cách :
+
+
+1. sử dụng thằng props
+2. sử dụng hook context
+
+
+
+ví dụ: có màn A => màn B => màn C 
